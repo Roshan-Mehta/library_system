@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/',include('blog.urls')),
     path('',views.login_redirect,name='login_redirect'),
+    #path('search/',include('start_app.urls')),
    	#url(r'^$',views.login_redirect,name='login_redirect')
 
    ]

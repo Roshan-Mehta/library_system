@@ -13,7 +13,11 @@
 	<p>Email Id: {{user.email}}</p>
 	<form>
 		<button formaction="/account/logout">Logout</button>
-	</form>
+		</form>
+		<form method="post"> {% csrf_token %}
+			<input type="text" name="books" placeholder="Search..">
+      <button formaction="/account/search/">Search</button>
+    </form>
 </div>
 
 {% endblock%}

@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <th>Field 1</th>
+        ...
+        <th>Field N</th>
+    </tr>
+    {% for item in search_results %}
+    <tr>
+        <td>{{ item }}</td>
+        <td>{{ item.first }}</td>
+    </tr>
+    {% endfor %}
+</table>

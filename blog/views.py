@@ -27,3 +27,14 @@ def profile(request):
 	args={'user':request.user}
 	return render(request,'blog/profile.html',args)
 
+def search(request):
+	args={'user': request.method}
+	for k,v in request.POST.items():
+		print("Key: ", k)
+		print("Value: ", v)
+		search_results = {'first': [1,2,3], 'second':['a','b','c']}
+		context = {
+		'search_results' : search_results
+		}
+	# print(args)
+	return render(request,'blog/search.html',context)
